@@ -1,0 +1,24 @@
+/* Fullscreen 1920x1080 app stage; all viewport units match the mockup canvas. */
+html,body,#tv{width:100vw;height:100vh;max-height:none;margin:0}
+#tv{position:relative}
+[inert]{pointer-events:none}
+.tile{height:8.952381vw}
+header nav>.circle+ .circle{margin-left:var(--header-button-gap)}
+.header-right>.profile{margin-left:1vw}
+.back-link>.chevron{margin-right:.6vw}
+.back-link>.home-symbol:not([hidden]){margin-right:.6vw}
+.channel-page .channel-country-wrap{margin-left:var(--header-button-gap)}
+.row-trailing>*+*{margin-left:.8vw}
+.form-actions>button+button{margin-left:.8vw}
+.form-actions button{width:calc(50% - .4vw)}
+/* Chromium 68 lacks native backdrop blur: preserve visibility with layered tint. */
+@supports not (backdrop-filter:blur(1px)){
+ .tvos-glass-element{background:rgba(70,83,91,.3)}
+ .dock.tvos-glass-element{background:linear-gradient(135deg,rgba(210,218,220,.2),rgba(65,80,85,.3));box-shadow:inset 0 1px 1px #ffffff25,0 10px 30px #0003}
+ .profile.tvos-glass-element,.circle.tvos-glass-element,.back-link,.channel-country-wrap{background:rgba(90,103,112,.32)}
+ .dialog.tvos-glass-element{background:rgba(27,42,53,.96)}
+ .scrim{background:rgba(7,18,27,.65)}
+ .channel-page header::before{background:rgba(23,38,51,.82)}
+ .back-link:hover,.back-link:focus,.circle.tvos-glass-element:hover,.circle.tvos-glass-element:focus{background:rgba(255,255,255,.24)}
+ body.solid .tvos-glass-element{background:#263b4b}
+}

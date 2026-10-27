@@ -1,0 +1,15 @@
+{
+  "id": "com.tvos.launcher",
+  "version": "1.0.0",
+  "vendor": "tvOS contributors",
+  "type": "web",
+  "main": "index.html",
+  "title": "tvOS",
+  "icon": "assets/branding/app-logo-1024.png",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true,
+  "requiredPermissions": [
+    "applications",
+    "applications.launcher"
+  ]
+}
